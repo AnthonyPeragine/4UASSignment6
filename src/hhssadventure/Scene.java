@@ -9,20 +9,17 @@ package hhssadventure;
  * @author haidj9901
  */
 public class Scene {
-    
+
     //private BufferedImage;
     //private Direction;
     //private Location;
     private boolean frontBlocked;
-    public Scene()
-    {
+
+    public Scene() {
         frontBlocked = false;
     }
-          
-    public boolean isFrontBlocked()
-    {
+
+    public boolean isFrontBlocked() {
         return (frontBlocked == true);
     }
-    
-    public Location
 }
