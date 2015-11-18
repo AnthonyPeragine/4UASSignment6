@@ -6,7 +6,7 @@ package hhssadventure;
 
 /**
  *
- * @author haidj9901
+ * @author haidj9901+kittyterror98
  */
 public class Scene {
 
