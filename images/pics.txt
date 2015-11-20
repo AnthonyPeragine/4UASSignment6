@@ -1,5 +1,4 @@
-Caf1
-N
+
 Upstairs1
 N IMG_0045.JPG false Dowstairs S
 E IMG_0046.JPG true

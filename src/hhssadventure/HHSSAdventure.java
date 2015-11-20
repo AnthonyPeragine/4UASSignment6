@@ -15,8 +15,10 @@ import java.util.Scanner;
  */
 public class HHSSAdventure {
 
-    ArrayList<Scene> scenes = new ArrayList<Scene>();
 
+    ArrayList<Location> locations = new ArrayList<Location>();
+    int currentDirection;
+    String currentLocation;
     public HHSSAdventure() {
         FileReader file = null;
         try {
@@ -26,16 +28,20 @@ public class HHSSAdventure {
         }
         Scanner input = new Scanner(file);
         while (input.hasNext()) {
-            Scene s = new Scene(input);
-            //pass the next line into the location class
-            scenes.add(s);
+            Location location = new Location(input);
+            locations.add(location);
         }
+        
     }
 
+    public void switchLocation(String name, int direction)
+    {
+        
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        HHSSAdventure h = new HHSSAdventure();
     }
 }

@@ -7,6 +7,7 @@ package hhssadventure;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 /**
@@ -16,17 +17,28 @@ import javax.imageio.ImageIO;
 public class Scene {
 
     private BufferedImage image;
-//    private Direction direction = new Direction();
+    private String direction;
     //private Location;
     private boolean frontBlocked;
+    private String nextLocation;
+    private String nextDirection;
 
-    public Scene() {
+    public Scene(Scanner input) {
+        direction = input.next();
         BufferedImage image = null;
         try {
-            image = ImageIO.read(new File("strawberry.jpg"));
+            image = ImageIO.read(new File("images/" + input.next()));
         } catch (IOException e) {
         }
-        frontBlocked = false;
+        frontBlocked = input.next().equals("true");
+        if (!frontBlocked) {
+            nextLocation = input.next();
+            nextDirection = input.nextLine();
+        }
+        else
+        {
+            input.nextLine();
+        }
     }
 
     public boolean isFrontBlocked() {
