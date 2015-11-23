@@ -34,11 +34,13 @@ public class Scene {
         if (!frontBlocked) {
             nextLocation = input.next();
             nextDirection = input.nextLine();
-        }
-        else
-        {
+        } else {
             input.nextLine();
         }
+    }
+
+    public BufferedImage getImage() {
+        return image;
     }
 
     public boolean isFrontBlocked() {

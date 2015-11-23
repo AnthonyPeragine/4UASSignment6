@@ -18,6 +18,7 @@ public class HHSSAdventure {
     ArrayList<Location> locations = new ArrayList<Location>();
     String currentDirection;
     String currentLocation;
+    private Interface gui;
 
     public HHSSAdventure() {
         FileReader file = null;
@@ -29,16 +30,23 @@ public class HHSSAdventure {
         Scanner input = new Scanner(file);
         currentLocation = input.nextLine();
         currentDirection = input.nextLine();
-        
+
         while (input.hasNext()) {
             Location location = new Location(input);
-            System.out.println(location.getLocationName());
+            //System.out.println(location.getLocationName());
             locations.add(location);
         }
-
+        gui = new Interface(this);
+        gui.setVisible(true);
+        
     }
 
+//    public Location getCurrentLocation()
+//    {
+//        return;
+//    }
     public void switchLocation(String name, int direction) {
+    
     }
 
     /**

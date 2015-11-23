@@ -23,7 +23,7 @@ public class Location {
             scenes.add(s);
         }
     }
-
+    
     public String getLocationName() {
         return locationName;
     }
