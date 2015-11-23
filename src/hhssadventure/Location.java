@@ -18,7 +18,6 @@ public class Location {
 
     public Location(Scanner input) {
         locationName = input.nextLine();
-        System.out.println(locationName);
         for (int x = 0; x < 4; x++) {
             Scene s = new Scene(input);
             scenes.add(s);
