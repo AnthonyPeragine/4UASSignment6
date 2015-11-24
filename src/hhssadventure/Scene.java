@@ -17,14 +17,14 @@ import javax.imageio.ImageIO;
 public class Scene {
 
     private BufferedImage image;
-    private String direction;
+    private int direction;
     //private Location;
     private boolean frontBlocked;
     private String nextLocation;
-    private String nextDirection;
+    private int nextDirection;
 
     public Scene(Scanner input) {
-        direction = input.next();
+        direction = Direction.getDir(input.next());
         image = null;
         try {
             image = ImageIO.read(new File("images/" + input.next()));
@@ -33,7 +33,7 @@ public class Scene {
         frontBlocked = input.next().equals("true");
         if (!frontBlocked) {
             nextLocation = input.next();
-            nextDirection = input.nextLine();
+            nextDirection = Direction.getDir(input.nextLine());
         } else {
             input.nextLine();
         }
