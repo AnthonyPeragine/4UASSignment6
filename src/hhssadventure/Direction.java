@@ -29,4 +29,11 @@ public class Direction {
         }
         return -1;
     }
+
+    public static int getNextDir(int direction) {
+        if (direction < 4) {
+            return direction++;
+        }
+        return 0;
+    }
 }
