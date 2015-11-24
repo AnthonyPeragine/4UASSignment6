@@ -30,7 +30,7 @@ public class HHSSAdventure {
         Scanner input = new Scanner(file);
         currentLocation = input.nextLine();
         currentDirection = input.nextLine();
-        
+        System.out.println(currentLocation);
         while (input.hasNext()) {
             Location location = new Location(input);
             //System.out.println(location.getLocationName());
@@ -41,12 +41,20 @@ public class HHSSAdventure {
         gui.setImage(locations.get(0).getScene(0));
     }
 
+    
 //    public Location getCurrentLocation()
 //    {
 //        return;
 //    }
     public void switchLocation(String name, int direction) {
-    
+        for (int x = 0; x < locations.size(); x++)
+        {
+            if (locations.get(x).getLocationName() == name)
+            {
+               gui.setImage(locations.get(x).getScene(direction));
+                System.out.println(x);
+            }
+        }
     }
 
     /**
