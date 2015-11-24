@@ -38,7 +38,7 @@ public class HHSSAdventure {
         }
         gui = new Interface(this);
         gui.setVisible(true);
-        gui.setImage(locations.get(0).getScene(0));
+        switchLocation(currentLocation, currentDirection);
     }
 
     
@@ -46,13 +46,12 @@ public class HHSSAdventure {
 //    {
 //        return;
 //    }
-    public void switchLocation(String name, int direction) {
+    public void switchLocation(String name, String direction) {
         for (int x = 0; x < locations.size(); x++)
         {
-            if (locations.get(x).getLocationName() == name)
+            if (locations.get(x).getLocationName().equals(name))
             {
-               gui.setImage(locations.get(x).getScene(direction));
-                System.out.println(x);
+               gui.setImage(locations.get(x).getScene(Direction.getDir(direction)));
             }
         }
     }
