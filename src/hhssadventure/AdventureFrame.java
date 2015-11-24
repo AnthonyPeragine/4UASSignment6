@@ -4,27 +4,29 @@
  */
 package hhssadventure;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 /**
  *
  * @author haidj9901
  */
-public class Interface extends javax.swing.JFrame {
-    
+public class AdventureFrame extends javax.swing.JFrame implements KeyListener {
+
     private static HHSSAdventure controller;
 
     /**
-     * Creates new form Interface
+     * Creates new form AdventureFrame
      */
-    public Interface() {
+    public AdventureFrame() {
         initComponents();
     }
-    
-    public Interface(HHSSAdventure hhss) {
+
+    public AdventureFrame(HHSSAdventure hhss) {
         this();
         controller = hhss;
-        
+
     }
 
     /**
@@ -53,6 +55,7 @@ public class Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
     public void setImage(BufferedImage image) {
         picturePanel1.setImage(image);
     }
@@ -74,13 +77,13 @@ public class Interface extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdventureFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdventureFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdventureFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdventureFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -88,12 +91,33 @@ public class Interface extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Interface().setVisible(true);
-                
+                new AdventureFrame().setVisible(true);
+
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private hhssadventure.PicturePanel picturePanel1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            controller.switchLocation(null, null);
+        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+        }
+        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        } else if (e.getKeyCode() == KeyEvent.VK_UP) {
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

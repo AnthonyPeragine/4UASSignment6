@@ -28,6 +28,11 @@ public class Location {
     {
        return scenes.get(direction).getImage();
     }
+    
+    public boolean isFrontBlocked(int direction)
+    {
+        return scenes.get(direction).isFrontBlocked();
+    }
     public String getLocationName() {
         return locationName;
     }

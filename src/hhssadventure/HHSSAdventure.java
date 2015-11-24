@@ -18,7 +18,7 @@ public class HHSSAdventure {
     ArrayList<Location> locations = new ArrayList<Location>();
     String currentDirection;
     String currentLocation;
-    private Interface gui;
+    private AdventureFrame gui;
 
     public HHSSAdventure() {
         FileReader file = null;
@@ -36,7 +36,7 @@ public class HHSSAdventure {
             //System.out.println(location.getLocationName());
             locations.add(location);
         }
-        gui = new Interface(this);
+        gui = new AdventureFrame(this);
         gui.setVisible(true);
         switchLocation(currentLocation, currentDirection);
     }
