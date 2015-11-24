@@ -38,7 +38,7 @@ public class HHSSAdventure {
         }
         gui = new Interface(this);
         gui.setVisible(true);
-        gui.setImage(locations.get(2).scenes.get(1).getImage());
+        gui.setImage(locations.get(0).getScene(0));
     }
 
 //    public Location getCurrentLocation()

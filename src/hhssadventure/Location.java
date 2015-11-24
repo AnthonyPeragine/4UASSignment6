@@ -4,6 +4,7 @@
  */
 package hhssadventure;
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,7 +24,10 @@ public class Location {
             scenes.add(s);
         }
     }
-    
+    public BufferedImage getScene(int direction)
+    {
+       return scenes.get(direction).getImage();
+    }
     public String getLocationName() {
         return locationName;
     }
