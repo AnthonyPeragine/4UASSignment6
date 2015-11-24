@@ -73,7 +73,7 @@ public class HHSSAdventure implements KeyListener{
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            switchLocation(currentLocation, Direction.getNextDir());
+            switchLocation(currentLocation, Direction.getNextDir(currentDirection));
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
         }
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
