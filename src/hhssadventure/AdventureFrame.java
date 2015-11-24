@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
  *
  * @author haidj9901
  */
-public class AdventureFrame extends javax.swing.JFrame implements KeyListener {
+public class AdventureFrame extends javax.swing.JFrame{
 
     private static HHSSAdventure controller;
 
@@ -100,24 +100,5 @@ public class AdventureFrame extends javax.swing.JFrame implements KeyListener {
     private hhssadventure.PicturePanel picturePanel1;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            controller.switchLocation(null, null);
-        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-        }
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-        } else if (e.getKeyCode() == KeyEvent.VK_UP) {
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }

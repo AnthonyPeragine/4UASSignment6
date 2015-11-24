@@ -5,6 +5,8 @@
  */
 package hhssadventure;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,7 +15,7 @@ import java.util.Scanner;
  *
  * @author jaf
  */
-public class HHSSAdventure {
+public class HHSSAdventure implements KeyListener{
 
     ArrayList<Location> locations = new ArrayList<Location>();
     String currentDirection;
@@ -61,5 +63,26 @@ public class HHSSAdventure {
      */
     public static void main(String[] args) {
         HHSSAdventure h = new HHSSAdventure();
+    }
+    
+    @Override
+    public void keyTyped(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            switchLocation(currentLocation, Direction.getNextDir());
+        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+        }
+        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        } else if (e.getKeyCode() == KeyEvent.VK_UP) {
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
