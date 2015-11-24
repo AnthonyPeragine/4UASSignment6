@@ -4,12 +4,14 @@
  */
 package hhssadventure;
 
+import java.awt.image.BufferedImage;
+
 /**
  *
  * @author haidj9901
  */
 public class Interface extends javax.swing.JFrame {
-
+    
     private static HHSSAdventure controller;
 
     /**
@@ -18,13 +20,11 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         initComponents();
     }
-
+    
     public Interface(HHSSAdventure hhss) {
         this();
         controller = hhss;
-        PicturePanel test = new PicturePanel();
-        System.out.println(controller.locations.get(0).getLocationName());
-        test.setImage(controller.locations.get(0).scenes.get(1).getImage());
+        
     }
 
     /**
@@ -36,21 +36,26 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        picturePanel1 = new hhssadventure.PicturePanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(picturePanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(picturePanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    public void setImage(BufferedImage image) {
+        picturePanel1.setImage(image);
+    }
 
     /**
      * @param args the command line arguments
@@ -81,12 +86,14 @@ public class Interface extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Interface().setVisible(true);
-
+                
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private hhssadventure.PicturePanel picturePanel1;
     // End of variables declaration//GEN-END:variables
 }

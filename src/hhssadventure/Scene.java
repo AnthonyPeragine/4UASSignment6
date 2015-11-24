@@ -25,7 +25,7 @@ public class Scene {
 
     public Scene(Scanner input) {
         direction = input.next();
-        BufferedImage image = null;
+        image = null;
         try {
             image = ImageIO.read(new File("images/" + input.next()));
         } catch (IOException e) {
