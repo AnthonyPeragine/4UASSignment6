@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author jaf
  */
-public class HHSSAdventure implements KeyListener{
+public class HHSSAdventure implements KeyListener {
 
     ArrayList<Location> locations = new ArrayList<Location>();
     String currentDirection;
@@ -40,20 +40,18 @@ public class HHSSAdventure implements KeyListener{
         }
         gui = new AdventureFrame(this);
         gui.setVisible(true);
-        switchLocation(currentLocation, currentDirection);
+        switchLocation(currentLocation, Direction.getDir(currentDirection));
     }
 
-    
 //    public Location getCurrentLocation()
 //    {
 //        return;
 //    }
-    public void switchLocation(String name, String direction) {
-        for (int x = 0; x < locations.size(); x++)
-        {
-            if (locations.get(x).getLocationName().equals(name))
-            {
-               gui.setImage(locations.get(x).getScene(Direction.getDir(direction)));
+    public void switchLocation(String name, int direction) {
+        //System.out.println(direction);
+        for (int x = 0; x < locations.size(); x++) {
+            if (locations.get(x).getLocationName().equals(name)) {
+                gui.setImage(locations.get(x).getScene(direction));
             }
         }
     }
@@ -64,7 +62,7 @@ public class HHSSAdventure implements KeyListener{
     public static void main(String[] args) {
         HHSSAdventure h = new HHSSAdventure();
     }
-    
+
     @Override
     public void keyTyped(KeyEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

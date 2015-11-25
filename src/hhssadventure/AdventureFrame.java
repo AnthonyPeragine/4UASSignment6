@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
  *
  * @author haidj9901
  */
-public class AdventureFrame extends javax.swing.JFrame{
+public class AdventureFrame extends javax.swing.JFrame {
 
     private static HHSSAdventure controller;
 

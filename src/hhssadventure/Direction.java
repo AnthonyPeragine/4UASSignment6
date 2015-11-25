@@ -30,9 +30,10 @@ public class Direction {
         return -1;
     }
 
-    public static int getNextDir(int direction) {
-        if (direction < 4) {
-            return direction++;
+    public static int getNextDir(String direction) {
+        if (getDir(direction) + 1 < 4)
+        {
+            return getDir(direction) + 1;
         }
         return 0;
     }
