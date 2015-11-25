@@ -74,6 +74,8 @@ public class HHSSAdventure implements KeyListener {
             currentDirection = Direction.getNextDir(currentDirection);
             switchLocation(currentLocation, currentDirection);
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            currentDirection = Direction.getPrevDir(currentDirection);
+            switchLocation(currentLocation, currentDirection);
         }
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
         } else if (e.getKeyCode() == KeyEvent.VK_UP) {
