@@ -37,4 +37,10 @@ public class Direction {
         }
         return 0;
     }
+    public static int getPrevDir(int direction) {
+        if (direction -1 >= 0) {
+            return direction - 1;
+        }
+        return 3;
+    }
 }
