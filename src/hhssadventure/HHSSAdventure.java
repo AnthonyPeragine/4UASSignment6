@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class HHSSAdventure implements KeyListener {
 
     ArrayList<Location> locations = new ArrayList<Location>();
-    String currentDirection;
+    int currentDirection;
     String currentLocation;
     private AdventureFrame gui;
 
@@ -31,7 +31,7 @@ public class HHSSAdventure implements KeyListener {
         }
         Scanner input = new Scanner(file);
         currentLocation = input.nextLine();
-        currentDirection = input.nextLine();
+        currentDirection = Direction.getDir(input.nextLine());
         System.out.println(currentLocation);
         while (input.hasNext()) {
             Location location = new Location(input);
@@ -40,7 +40,8 @@ public class HHSSAdventure implements KeyListener {
         }
         gui = new AdventureFrame(this);
         gui.setVisible(true);
-        switchLocation(currentLocation, Direction.getDir(currentDirection));
+        gui.addKeyListener(this);
+        switchLocation(currentLocation, currentDirection);
     }
 
 //    public Location getCurrentLocation()
@@ -65,13 +66,13 @@ public class HHSSAdventure implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            switchLocation(currentLocation, Direction.getNextDir(currentDirection));
+            currentDirection = Direction.getNextDir(currentDirection);
+            switchLocation(currentLocation, currentDirection);
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
         }
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
@@ -81,6 +82,5 @@ public class HHSSAdventure implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
