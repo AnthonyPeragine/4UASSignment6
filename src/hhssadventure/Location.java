@@ -24,11 +24,20 @@ public class Location {
             scenes.add(s);
         }
     }
-    public BufferedImage getScene(int direction)
+    public BufferedImage getImage(int direction)
     {
        return scenes.get(direction).getImage();
     }
     
+    public String getNextLocation(int direction)
+    {
+        return scenes.get(direction).getNextLocation();
+    }
+    
+    public int getNextDirection(int direction)
+    {
+        return scenes.get(direction).getNextDirection();
+    }
     public boolean isFrontBlocked(int direction)
     {
         return scenes.get(direction).isFrontBlocked();

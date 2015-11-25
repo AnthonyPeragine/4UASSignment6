@@ -31,14 +31,14 @@ public class Direction {
     }
 
     public static int getNextDir(int direction) {
-        if (direction + 1 < 4)
-        {
+        if (direction + 1 < 4) {
             return direction + 1;
         }
         return 0;
     }
+
     public static int getPrevDir(int direction) {
-        if (direction -1 >= 0) {
+        if (direction - 1 >= 0) {
             return direction - 1;
         }
         return 3;

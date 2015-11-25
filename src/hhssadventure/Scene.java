@@ -38,7 +38,16 @@ public class Scene {
             input.nextLine();
         }
     }
-
+    
+    public String getNextLocation()
+    {
+        return nextLocation;
+    }
+    
+    public int getNextDirection()
+    {
+        return nextDirection;
+    }
     public BufferedImage getImage() {
         return image;
     }
