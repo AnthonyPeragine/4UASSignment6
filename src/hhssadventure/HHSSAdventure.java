@@ -53,6 +53,7 @@ public class HHSSAdventure implements KeyListener {
         for (int x = 0; x < locations.size(); x++) {
             if (locations.get(x).getLocationName().equals(name)) {
                 gui.setImage(locations.get(x).getImage(direction));
+                break;
             }
         }
     }
@@ -79,12 +80,16 @@ public class HHSSAdventure implements KeyListener {
         }
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
         } else if (e.getKeyCode() == KeyEvent.VK_UP) {
+            String tempLocation = "";
             for (int x = 0; x < locations.size(); x++) {
                 if (locations.get(x).getLocationName().equals(currentLocation)) {
-                    currentLocation = locations.get(x).getNextLocation(currentDirection);
-                    switchLocation(currentLocation, currentDirection);
+                    tempLocation = locations.get(x).getNextLocation(currentDirection);
+                    break;
                 }
             }
+            currentLocation = tempLocation;
+            System.out.println(currentLocation);
+            switchLocation(currentLocation, currentDirection);
         }
     }
 
