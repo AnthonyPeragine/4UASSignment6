@@ -80,15 +80,14 @@ public class HHSSAdventure implements KeyListener {
         }
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
         } else if (e.getKeyCode() == KeyEvent.VK_UP) {
-            String tempLocation = "";
             for (int x = 0; x < locations.size(); x++) {
                 if (locations.get(x).getLocationName().equals(currentLocation)) {
-                    tempLocation = locations.get(x).getNextLocation(currentDirection);
+                    currentLocation = locations.get(x).getNextLocation(currentDirection);
+                    currentDirection = locations.get(x).getNextDirection(currentDirection);
                     break;
                 }
             }
-            currentLocation = tempLocation;
-            System.out.println(currentLocation);
+            System.out.println(currentLocation + "-" + currentDirection);
             switchLocation(currentLocation, currentDirection);
         }
     }
