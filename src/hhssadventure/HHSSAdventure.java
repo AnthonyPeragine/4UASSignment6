@@ -36,7 +36,7 @@ public class HHSSAdventure implements KeyListener {
             Location location = new Location(input);
             //System.out.println(location.getLocationName());
             locations.add(location);
-            
+
         }
         gui = new AdventureFrame(this);
         gui.setVisible(true);
@@ -48,10 +48,10 @@ public class HHSSAdventure implements KeyListener {
 //    {
 //        return;
 //    }
-    public void switchLocation(String name, int direction) {
+    public void switchLocation(String locationName, int direction) {
         //System.out.println(direction);
         for (int x = 0; x < locations.size(); x++) {
-            if (locations.get(x).getLocationName().equals(name)) {
+            if (locations.get(x).getLocationName().equals(locationName)) {
                 gui.setImage(locations.get(x).getImage(direction));
                 break;
             }
@@ -63,7 +63,7 @@ public class HHSSAdventure implements KeyListener {
      */
     public static void main(String[] args) {
         HHSSAdventure h = new HHSSAdventure();
-        
+
     }
 
     @Override
@@ -89,6 +89,7 @@ public class HHSSAdventure implements KeyListener {
                     break;
                 }
             }
+            System.out.println(currentLocation + " - " + currentDirection);
             switchLocation(currentLocation, currentDirection);
         }
     }
