@@ -32,12 +32,11 @@ public class HHSSAdventure implements KeyListener {
         Scanner input = new Scanner(file);
         currentLocation = input.nextLine();
         currentDirection = Direction.getDir(input.nextLine());
-        System.out.println(currentLocation);
         while (input.hasNext()) {
             Location location = new Location(input);
             //System.out.println(location.getLocationName());
             locations.add(location);
-            System.out.println(location.locationName);
+            
         }
         gui = new AdventureFrame(this);
         gui.setVisible(true);

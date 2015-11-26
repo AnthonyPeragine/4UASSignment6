@@ -55,6 +55,6 @@ public class Scene {
     }
 
     public boolean isFrontBlocked() {
-        return (frontBlocked == true);
+        return (frontBlocked);
     }
 }
