@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class Location {
 
-    ArrayList<Scene> scenes = new ArrayList<Scene>();
-    String locationName;
+    private ArrayList<Scene> scenes = new ArrayList<Scene>();
+    private String locationName;
 
     public Location(Scanner input) {
         locationName = input.nextLine();
@@ -23,12 +23,6 @@ public class Location {
         for (int x = 0; x < 4; x++) {
             Scene s = new Scene(input);
             scenes.add(s);
-            System.out.print(s.direction+" ");
-            System.out.print(s.imageLocation+" ");
-            System.out.print(s.frontBlocked+" ");
-            System.out.print(s.nextLocation+" ");
-            System.out.print(s.nextDirection);
-            System.out.println();
         }
     }
 
