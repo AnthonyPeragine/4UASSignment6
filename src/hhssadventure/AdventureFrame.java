@@ -14,7 +14,7 @@ import java.awt.image.BufferedImage;
  */
 public class AdventureFrame extends javax.swing.JFrame{
 
-    private static HHSSAdventure controller;
+    private static HHSSAdventure controller; //initialize the HHSSadventure class
 
     /**
      * Creates new form AdventureFrame
@@ -23,10 +23,13 @@ public class AdventureFrame extends javax.swing.JFrame{
         initComponents();
     }
 
+    /**
+     * AdventureFrame constructor 
+     * @param hhss the main logic used 
+     */
     public AdventureFrame(HHSSAdventure hhss) {
         this();
         controller = hhss;
-
     }
 
     /**
@@ -56,6 +59,10 @@ public class AdventureFrame extends javax.swing.JFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * sets the image on the picture panel based on the BufferedImage passed in
+     * @param image the BufferedImage to be passed in
+     */
     public void setImage(BufferedImage image) {
         picturePanel1.setImage(image);
     }
