@@ -85,11 +85,10 @@ public class HHSSAdventure implements KeyListener {
                 if (locations.get(x).getLocationName().equals(currentLocation) && !locations.get(x).isFrontBlocked(currentDirection)) {
                     currentLocation = locations.get(x).getNextLocation(currentDirection);
                     currentDirection = locations.get(x).getNextDirection(currentDirection);
-                    System.out.println(locations.get(x).isFrontBlocked(currentDirection));
                     break;
                 }
+
             }
-            System.out.println(currentLocation + " - " + currentDirection);
             switchLocation(currentLocation, currentDirection);
         }
     }
