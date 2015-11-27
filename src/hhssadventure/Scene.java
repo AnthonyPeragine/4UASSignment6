@@ -12,47 +12,65 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author haidj9901+kittyterror98
+ * @author caius and jafer
  */
 public class Scene {
 
-    private BufferedImage image;
-    private int direction;
-    private boolean frontBlocked;
-    private String nextLocation;
-    private int nextDirection;
-    private String imageLocation;
+    private BufferedImage image; //initializing image for the scene
+    private int direction; //the direction of the location, specifying the scene
+    private boolean frontBlocked; //is front blocked
+    private String nextLocation; //the name of the next location based on the direction of the current location  (scene)
+    private int nextDirection; //the direction to be facing after arriving at the next location
 
     public Scene(Scanner input) {
-        direction = Direction.getDir(input.next());
-        image = null;
+        direction = Direction.getDir(input.next()); //convert next word to direction
+        image = null; //set the image as null to begin
         try {
-            imageLocation = input.next();
-            image = ImageIO.read(new File("images/" + imageLocation));
+            image = ImageIO.read(new File("images/" + input.next())); //pass the next word to be read, and assign the image of the scence
         } catch (IOException e) {
         }
-        frontBlocked = input.next().equals("true");
-        if (!frontBlocked) {
-            nextLocation = input.next();
-            nextDirection = Direction.getDir(input.next());
-            input.nextLine();
+        frontBlocked = input.next().equals("true"); //use the next word to determine whether front is blocked
+        if (!frontBlocked) { //if front isn't blocked:
+            nextLocation = input.next(); //get the next word to be the next location based on the scene
+            nextDirection = Direction.getDir(input.next()); // get the direction to be facing after arriving at the next location
+            input.nextLine(); //go to next line(next location name)
         } else {
             input.nextLine();
         }
     }
 
+    /**
+     * Get the name of the next location
+     *
+     * @return next location
+     */
     public String getNextLocation() {
         return nextLocation;
     }
 
+    /**
+     * Get the direction of the next location
+     *
+     * @return next direction
+     */
     public int getNextDirection() {
         return nextDirection;
     }
 
+    /**
+     * get the Image of the current scene
+     *
+     * @return the bufferedImage for the scene
+     */
     public BufferedImage getImage() {
         return image;
     }
 
+    /**
+     * Determine whether the front of the scene is blocked
+     *
+     * @return whether front is blocked or not
+     */
     public boolean isFrontBlocked() {
         return (frontBlocked);
     }

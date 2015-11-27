@@ -14,18 +14,23 @@ import java.util.Scanner;
  */
 public class Location {
 
-    private ArrayList<Scene> scenes = new ArrayList<Scene>();
-    private String locationName;
+    private ArrayList<Scene> scenes = new ArrayList<Scene>(); //an array list containing the 4 scenes of each location
+    private String locationName; //name of the location
 
     public Location(Scanner input) {
-        locationName = input.nextLine();
-        System.out.println(locationName);
+
+        locationName = input.nextLine(); //assign first word as the name of the location
+        //cycle through every scene of the location and add it to the array list
         for (int x = 0; x < 4; x++) {
             Scene s = new Scene(input);
             scenes.add(s);
         }
     }
-
+/**
+ * Get the image from the scene
+ * @param direction specify the direction of the current location (specific scene)
+ * @return the image from the scene
+ */
     public BufferedImage getImage(int direction) {
         return scenes.get(direction).getImage();
     }
