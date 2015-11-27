@@ -16,20 +16,31 @@ import javax.imageio.ImageIO;
  */
 public class Scene {
 
+    //initializing variables
     private BufferedImage image; //initializing image for the scene
     private int direction; //the direction of the location, specifying the scene
     private boolean frontBlocked; //is front blocked
     private String nextLocation; //the name of the next location based on the direction of the current location  (scene)
     private int nextDirection; //the direction to be facing after arriving at the next location
 
+    /**
+     * Constructor for the Scene class
+     *
+     * @param input the scanner to read information from
+     */
     public Scene(Scanner input) {
         direction = Direction.getDir(input.next()); //convert next word to direction
         image = null; //set the image as null to begin
+
+        //pass the next word to be read, and assign the image of the scene
         try {
-            image = ImageIO.read(new File("images/" + input.next())); //pass the next word to be read, and assign the image of the scence
+            image = ImageIO.read(new File("images/" + input.next()));
         } catch (IOException e) {
         }
+
         frontBlocked = input.next().equals("true"); //use the next word to determine whether front is blocked
+        
+        
         if (!frontBlocked) { //if front isn't blocked:
             nextLocation = input.next(); //get the next word to be the next location based on the scene
             nextDirection = Direction.getDir(input.next()); // get the direction to be facing after arriving at the next location

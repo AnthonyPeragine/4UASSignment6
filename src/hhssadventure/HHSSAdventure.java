@@ -93,15 +93,11 @@ public final class HHSSAdventure implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             //switch the image based on the next direction
             currentDirection = Direction.getNextDir(currentDirection);
-            switchLocation(currentLocation, currentDirection);
-        } 
-        //if the left key is pressed
+        } //if the left key is pressed
         else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             //switch the image based on the previous direction
             currentDirection = Direction.getPrevDir(currentDirection);
-            switchLocation(currentLocation, currentDirection);
-        }
-        //if the up key is pressed
+        } //if the up key is pressed
         else if (e.getKeyCode() == KeyEvent.VK_UP) {
             //find the next location and the next direction
             for (int x = 0; x < locations.size(); x++) {
@@ -111,9 +107,10 @@ public final class HHSSAdventure implements KeyListener {
                     break;
                 }
             }
-            //change the image based on the new location and direction
-            switchLocation(currentLocation, currentDirection);
         }
+
+        //change the image based on the new location and direction
+        switchLocation(currentLocation, currentDirection);
     }
 
     @Override

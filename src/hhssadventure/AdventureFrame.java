@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
  *
  * @author haidj9901
  */
-public class AdventureFrame extends javax.swing.JFrame{
+public class AdventureFrame extends javax.swing.JFrame {
 
     private static HHSSAdventure controller; //initialize the HHSSadventure class
 
@@ -24,8 +24,9 @@ public class AdventureFrame extends javax.swing.JFrame{
     }
 
     /**
-     * AdventureFrame constructor 
-     * @param hhss the main logic used 
+     * AdventureFrame constructor
+     *
+     * @param hhss the main logic used
      */
     public AdventureFrame(HHSSAdventure hhss) {
         this();
@@ -49,11 +50,11 @@ public class AdventureFrame extends javax.swing.JFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(picturePanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(picturePanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(picturePanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(picturePanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
@@ -61,6 +62,7 @@ public class AdventureFrame extends javax.swing.JFrame{
 
     /**
      * sets the image on the picture panel based on the BufferedImage passed in
+     *
      * @param image the BufferedImage to be passed in
      */
     public void setImage(BufferedImage image) {
@@ -107,5 +109,4 @@ public class AdventureFrame extends javax.swing.JFrame{
     private hhssadventure.PicturePanel picturePanel1;
     // End of variables declaration//GEN-END:variables
 
-    
 }
