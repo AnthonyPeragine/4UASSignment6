@@ -49,6 +49,10 @@ public class Scene {
         return nextDirection;
     }
 
+    public BufferedImage getImage() {
+        return image;
+    }
+
     public boolean isFrontBlocked() {
         return (frontBlocked);
     }

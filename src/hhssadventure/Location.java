@@ -30,10 +30,6 @@ public class Location {
         return scenes.get(direction).getImage();
     }
 
-    public Scene getScene(int direction) {
-        return scenes.get(direction);
-    }
-
     public String getNextLocation(int direction) {
         return scenes.get(direction).getNextLocation();
     }
