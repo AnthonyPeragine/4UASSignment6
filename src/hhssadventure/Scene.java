@@ -17,12 +17,11 @@ import javax.imageio.ImageIO;
 public class Scene {
 
     private BufferedImage image;
-    int direction;
-    //private Location;
-    boolean frontBlocked;
-    String nextLocation;
-    int nextDirection;
-    String imageLocation;
+    private int direction;
+    private boolean frontBlocked;
+    private String nextLocation;
+    private int nextDirection;
+    private String imageLocation;
 
     public Scene(Scanner input) {
         direction = Direction.getDir(input.next());
@@ -48,10 +47,6 @@ public class Scene {
 
     public int getNextDirection() {
         return nextDirection;
-    }
-
-    public BufferedImage getImage() {
-        return image;
     }
 
     public boolean isFrontBlocked() {
