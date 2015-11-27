@@ -63,7 +63,6 @@ public class HHSSAdventure implements KeyListener {
      */
     public static void main(String[] args) {
         HHSSAdventure h = new HHSSAdventure();
-
     }
 
     @Override
