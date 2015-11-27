@@ -17,6 +17,10 @@ public class Location {
     private ArrayList<Scene> scenes = new ArrayList<Scene>(); //an array list containing the 4 scenes of each location
     private String locationName; //name of the location
 
+    /**
+     * Constructor for the location class
+     * @param input 
+     */
     public Location(Scanner input) {
 
         locationName = input.nextLine(); //assign first word as the name of the location
