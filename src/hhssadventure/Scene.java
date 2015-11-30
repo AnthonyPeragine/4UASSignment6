@@ -11,6 +11,8 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 /**
+ * Scene class used to store an image at a certain location based on one
+ * direction
  *
  * @author caius and jafer and jafer and caius
  */
@@ -39,8 +41,8 @@ public class Scene {
         }
 
         frontBlocked = input.next().equals("true"); //use the next word to determine whether front is blocked
-        
-        
+
+
         if (!frontBlocked) { //if front isn't blocked:
             nextLocation = input.next(); //get the next word to be the next location based on the scene
             nextDirection = Direction.getDir(input.next()); // get the direction to be facing after arriving at the next location

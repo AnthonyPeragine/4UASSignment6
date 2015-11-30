@@ -9,6 +9,7 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 /**
+ * The JFrame used for the main GUI of the game frame
  *
  * @author Jafer and caius
  */
@@ -108,5 +109,4 @@ public class AdventureFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private hhssadventure.PicturePanel picturePanel1;
     // End of variables declaration//GEN-END:variables
-
 }

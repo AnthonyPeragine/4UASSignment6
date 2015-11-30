@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Location class that contains four different scenes based on each direction
  *
  * @author caius and Jafer
  */

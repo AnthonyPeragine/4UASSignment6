@@ -5,8 +5,9 @@
 package hhssadventure;
 
 /**
- * Class used to converted directions in the form of the strings, "N", "E", "S", "W" to an integer value
- * 
+ * Class used to converted directions in the form of the strings, "N", "E", "S",
+ * "W" to an integer value
+ *
  * @author caius and Jafer
  */
 public class Direction {
@@ -19,7 +20,9 @@ public class Direction {
     private static final int MAXDIR = 4;
 
     /**
-     * Returns the integer value of a direction string in the aforementioned form
+     * Returns the integer value of a direction string in the aforementioned
+     * form
+     *
      * @param direction the string value of the direction
      * @return the integer value of the direction
      */
@@ -39,7 +42,8 @@ public class Direction {
 
     /**
      * Returns the direction following the direction passed in
-     * @param direction the current direction 
+     *
+     * @param direction the current direction
      * @return the next direction
      */
     public static int getNextDir(int direction) {
@@ -51,6 +55,7 @@ public class Direction {
 
     /**
      * Returns the direction followed by the direction passed in
+     *
      * @param direction the current direction
      * @return the previous direction
      */

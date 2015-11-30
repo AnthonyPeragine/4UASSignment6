@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Main game logic class
  *
  * @author Jafer and caius
  */
