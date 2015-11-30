@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author caius and jafer
+ * @author caius and jafer and jafer and caius
  */
 public class Scene {
 

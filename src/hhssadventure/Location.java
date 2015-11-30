@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author haidj9901
+ * @author caius and Jafer
  */
 public class Location {
 

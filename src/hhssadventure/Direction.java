@@ -7,7 +7,7 @@ package hhssadventure;
 /**
  * Class used to converted directions in the form of the strings, "N", "E", "S", "W" to an integer value
  * 
- * @author branc2347
+ * @author caius and Jafer
  */
 public class Direction {
 

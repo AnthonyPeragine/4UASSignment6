@@ -10,7 +10,7 @@ import java.awt.image.BufferedImage;
 
 /**
  *
- * @author haidj9901
+ * @author Jafer and caius
  */
 public class AdventureFrame extends javax.swing.JFrame {
 

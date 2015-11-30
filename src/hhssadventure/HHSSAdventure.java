@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author jafer and caius
+ * @author Jafer and caius
  */
 public final class HHSSAdventure implements KeyListener {
 
