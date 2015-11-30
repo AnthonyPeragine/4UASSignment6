@@ -14,7 +14,7 @@ import javax.imageio.ImageIO;
  * Scene class used to store an image at a certain location based on one
  * direction
  *
- * @author caius and jafer and jafer and caius
+ * @author caius and jAfer and jafer and caius
  */
 public class Scene {
 
