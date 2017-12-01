@@ -23,6 +23,7 @@ public class HHSSAdventure {
         
         System.out.println(file.getSpawn() + " " + file.getSpawnDir());
         for(int i = 0; i < file.locations.size(); i++)
-            System.out.println(file.locations.get(i).getDir());
+            System.out.println(file.locations.get(i).getName());
+        
     }
 }

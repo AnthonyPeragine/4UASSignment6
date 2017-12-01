@@ -45,24 +45,28 @@ public class TextFileReader {
 
         //start reading in locations
         int count = 0;
-        while (in.hasNext()) {
+        int num = 0;
+        String name = "";
+        while (in.hasNextLine()) {
             
-            String name = "";
             if (count % 5 == 0) {
-                name = in.nextLine();
+                name = in.nextLine();    
+                count++;
             } 
-            
             String direction = in.next();
             String img = in.next();
+            System.out.println(img);
             String wall = in.next();
             String nextLoc = "";
             String nextDir = "";
-            if (wall == "false") {
+            if (wall.equals("false")) {
                 nextLoc = in.next();
                 nextDir = in.nextLine();
+            }else{
+                in.nextLine();
             }
             //create each contact
-            Location l = new Location(name + " " + direction);
+            Location l = new Location(name + direction);
             l.setDir(direction);
             l.setImage(img);
             l.setNextLoc(nextLoc);

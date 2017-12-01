@@ -51,6 +51,10 @@ public class Location {
     }
     
     //GETTERS
+    public String getName(){
+        return this.name;
+    }
+    
     public String getDir(){
         return this.direction;
     }
