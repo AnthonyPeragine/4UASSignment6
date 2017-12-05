@@ -40,9 +40,6 @@ public class TextFileReader {
         spawnLoc = in.nextLine();
         spawnDir = in.nextLine();
 
-        //set the number of positions in the array
-
-
         //start reading in locations
         int count = 0;
         int num = 0;
@@ -55,7 +52,6 @@ public class TextFileReader {
             } 
             String direction = in.next();
             String img = in.next();
-            System.out.println(img);
             String wall = in.next();
             String nextLoc = "";
             String nextDir = "";
@@ -65,14 +61,15 @@ public class TextFileReader {
             }else{
                 in.nextLine();
             }
-            //create each contact
+            //create each location
             Location l = new Location(name + direction);
             l.setDir(direction);
             l.setImage(img);
+            l.setWall(wall);
             l.setNextLoc(nextLoc);
             l.setNextDir(nextDir);
 
-            //add contact to list
+            //add location to list
             locations.add(l);
             count++;
         }

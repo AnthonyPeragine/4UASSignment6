@@ -15,7 +15,7 @@ public class Location {
     private String name;
     private String direction;
     private String img;
-    private boolean wall;
+    private String wall;
     private String nextLoc;
     private String nextDir;
     
@@ -34,18 +34,18 @@ public class Location {
         this.img = img;
     }
     
-    public void setWall(boolean wall){
+    public void setWall(String wall){
         this.wall = wall;
     }
     
     public void setNextLoc(String nextLoc){
-        if(wall){
+        if(wall.equals("false")){
             this.nextLoc = nextLoc;
         }
     }
     
     public void setNextDir(String nextDir){
-        if(wall){
+        if(wall.equals("false")){
             this.nextDir = nextDir;
         }
     }
@@ -63,7 +63,7 @@ public class Location {
         return this.img;
     }
     
-    public boolean getWall(){
+    public String getWall(){
         return this.wall;
     }
     
