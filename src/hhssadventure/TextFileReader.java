@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  * Main game logic class
- *
+ *.
  * @author peraa0837
  */
 public final class TextFileReader implements KeyListener {

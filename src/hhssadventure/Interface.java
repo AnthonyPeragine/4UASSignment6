@@ -9,7 +9,7 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 /**
- *
+ *.
  * @author jetkeo
  */
 public class Interface extends javax.swing.JFrame {

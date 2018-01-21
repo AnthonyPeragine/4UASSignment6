@@ -11,7 +11,7 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 /**
- *
+ *.
  * @author jetkeo
  */
 public class Image {

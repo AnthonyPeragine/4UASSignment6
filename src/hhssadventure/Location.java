@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
+ *.
  * @author peraa0837
  */
 public class Location {

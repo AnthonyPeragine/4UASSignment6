@@ -5,7 +5,7 @@
 package hhssadventure;
 
 /**
- *
+ *.
  * @author jetkeo
  */
 public class Player {

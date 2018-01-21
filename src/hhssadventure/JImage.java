@@ -6,7 +6,7 @@ import javax.swing.JComponent;
 
 /**
  * A custom JComponent that will contain an image
- *
+ *.
  * @author lamont
  */
 public class JImage extends JComponent {
